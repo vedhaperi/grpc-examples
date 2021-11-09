@@ -31,8 +31,8 @@ service Greeter {
 message HelloRequest {
   string name = 1;
   bool ismapper = 2;
-  int32 shard_size = 3;
-  int32 offset = 4; 
+  int64 shard_size = 3;
+  int64 offset = 4; 
 }
 
 // The response message containing the greetings
