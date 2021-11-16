@@ -28,6 +28,9 @@ service Greeter {
 
   // Check heartbeat
   rpc CheckHeartbeat (BeatRequest) returns (BeatReply) {}
+
+  // Sends backup to other master
+  rpc SendBackup(HelloRequest) returns (HelloReply) {}
 }
 
 // The request message containing the user's name.
