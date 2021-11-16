@@ -30,7 +30,7 @@ service Greeter {
   rpc CheckHeartbeat (BeatRequest) returns (BeatReply) {}
 
   // Sends backup to other master
-  rpc SendBackup(HelloRequest) returns (HelloReply) {}
+  rpc SendBackup(BackupRequest) returns (HelloReply) {}
 }
 
 // The request message containing the user's name.
@@ -41,6 +41,10 @@ message HelloRequest {
   int64 offset = 4; 
   int64 no_reducers = 5;
   int64 fail = 6;
+}
+
+message BackupRequest{
+  repeated HelloRequest backup_request = 1;
 }
 
 // The response message containing the greetings
