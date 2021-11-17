@@ -49,6 +49,7 @@ message BackupRequest{
   repeated string processed_files = 2;
   int64 no_mappers = 3;
   int64 no_reducers = 4;
+  string container_name = 5;
 }
 
 // The response message containing the greetings
