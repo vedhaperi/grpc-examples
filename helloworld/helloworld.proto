@@ -46,6 +46,7 @@ message HelloRequest {
 
 message BackupRequest{
   repeated HelloRequest backup_request = 1;
+  repeated string processed_files = 2;
 }
 
 // The response message containing the greetings
